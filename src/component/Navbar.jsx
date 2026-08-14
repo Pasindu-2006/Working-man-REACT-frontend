@@ -182,7 +182,7 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             <span className='text-base font-medium'>Home</span>
-            <img src={Rarrow} alt="arrow" className='w-4 brightness-200' />
+            {/* <img src={Rarrow} alt="arrow" className='w-4 brightness-200' /> */}
           </a>
 
           {/* Blog Link */}
@@ -192,13 +192,13 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             <span className='text-base font-medium'>Blog</span>
-            <img src={Rarrow} alt="arrow" className='w-4 brightness-200' />
+            {/* <img src={Rarrow} alt="arrow" className='w-4 brightness-200' /> */}
           </a>
 
           {/* Expandable Pages Tab with Smooth Animated Dropdown */}
           <div className='border-b border-gray-800'>
             <div 
-              className='p-3 flex flex-row justify-between items-center text-blue-400 cursor-pointer'
+              className='p-3 flex flex-row justify-between items-center text-white hover:text-blue-400 transition-allcursor-pointer'
               onClick={() => setRarroOpen(!isRarroOpen)}
             >
               <span className='text-base font-medium'>Pages</span>
@@ -213,32 +213,32 @@ const Navbar = () => {
             <div className={`grid transition-all duration-300 ease-in-out ${isRarroOpen ? 'grid-rows-[1fr] opacity-100 pb-2' : 'grid-rows-[0fr] opacity-0 pb-0'}`}>
               <div className='overflow-hidden flex flex-col pl-4 w-full gap-1'>
                 <a 
-                  href="#page1" 
+                  href="#about" 
                   className='px-3 py-2 text-sm text-gray-300 hover:text-white transition-all'
                   onClick={() => setMenuOpen(false)}
                 >
-                  Page 1
+                  About Us
                 </a>
                 <a 
-                  href="#page2" 
+                  href="#services" 
                   className='px-3 py-2 text-sm text-gray-300 hover:text-white transition-all'
                   onClick={() => setMenuOpen(false)}
                 >
-                  Page 1
+                   Services
                 </a>
                 <a 
-                  href="#page3" 
+                  href="#our-team" 
                   className='px-3 py-2 text-sm text-gray-300 hover:text-white transition-all'
                   onClick={() => setMenuOpen(false)}
                 >
-                  Page 1
+                  Our Team
                 </a>
                 <a 
-                  href="#page4" 
+                  href="#FAQ" 
                   className='px-3 py-2 text-sm text-gray-300 hover:text-white transition-all'
                   onClick={() => setMenuOpen(false)}
                 >
-                  Page 1
+                  FAQ
                 </a>
               </div>
             </div>
@@ -252,20 +252,20 @@ const Navbar = () => {
           >
             
             <span className='text-base font-medium'>Contact Us</span>
-            <img src={Rarrow} alt="arrow" className='w-4 brightness-200' />
+            {/* <img src={Rarrow} alt="arrow" className='w-4 brightness-200' /> */}
           </a>
 
         </div>
 
         {/* Mobile Contact Footer Info (Phone & Email) */}
-        <div className='mt-auto pt-6 flex flex-col gap-3 pb-4'>
-          <div className='flex items-center gap-3'>
+        <div className='mt-4 pt-6 flex flex-col gap-3 px-3 pb-4'>
+          <div className='flex items-center gap-3 pb-2'>
             <img src={Phone} alt="phone" className='w-5 brightness-200' />
             <span className='text-xs text-white'>+(100) 234-5678</span>
           </div>
-          <div className='flex items-center gap-3'>
+          <div className='flex items-center gap-3 pb-2'>
             <img src={Email} alt="email" className='w-5 brightness-200' />
-            <span className='text-xs text-white'>info@template.com</span>
+            <span className='text-xs text-white'>info@gmail.com</span>
           </div>
         </div>
         
