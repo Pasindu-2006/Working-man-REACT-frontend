@@ -10,6 +10,7 @@ import Darrow from '../assets/Arrow Down.svg'
 import MenuOpen from '../assets/Hamburger-02.svg'
 import Close from '../assets/close_icon.svg'
 import Rarrow from '../assets/Arrow Right-1.svg'
+import Service from './Service'
 
 const Navbar = () => {
   // States to manage dropdowns and mobile menu visibility
@@ -110,7 +111,7 @@ const Navbar = () => {
                   About Us
                 </a>
                 <a 
-                  href="#page2" 
+                  href="#service" 
                   className='px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all'
                   onClick={() => setDropdownOpen(false)}
                 >
@@ -220,7 +221,7 @@ const Navbar = () => {
                   About Us
                 </a>
                 <a 
-                  href="#services" 
+                  href="#service" 
                   className='px-3 py-2 text-sm text-gray-300 hover:text-white transition-all'
                   onClick={() => setMenuOpen(false)}
                 >
