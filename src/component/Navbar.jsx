@@ -10,6 +10,7 @@ import Darrow from '../assets/Arrow Down.svg'
 import MenuOpen from '../assets/Hamburger-02.svg'
 import Close from '../assets/close_icon.svg'
 import Rarrow from '../assets/Arrow Right-1.svg'
+import RightArrow from '../assets/Right Arrow.svg'
 import Service from './Service'
 
 const Navbar = () => {
@@ -104,7 +105,7 @@ const Navbar = () => {
             {isDropdownOpen && (
               <div className='absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 flex flex-col z-50'>
                 <a 
-                  href="#page1" 
+                  href="#about" 
                   className='px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all'
                   onClick={() => setDropdownOpen(false)}
                 >

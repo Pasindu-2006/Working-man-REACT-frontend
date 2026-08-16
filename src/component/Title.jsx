@@ -12,7 +12,7 @@ const Title = () => {
                 <p className='sm:text-lg text-blue-600 '>Service We Provide</p>
                 <img src={RightArrow} alt="" />
             </div>
-            <h2 className='text-center font-semibold text-2xl sm:text-4xl sm:font-medium pt-2 pb-7 text-blue-950'>The Best Plumbing Service & Maintainence</h2>
+            <h2 className='text-center font-semibold text-2xl sm:text-4xl sm:font-medium pt-2 pb-5 text-blue-950'>The Best Plumbing Service & Maintainence</h2>
         </div>
 
 

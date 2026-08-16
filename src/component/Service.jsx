@@ -8,7 +8,7 @@ import Img6 from '../assets/Image-Container-6.jpg'
 import Icon1 from '../assets/Pipe-Installation.svg'
 import Icon2 from '../assets/Pipe-Plumbing.svg'
 import Icon3 from '../assets/Pipe-Dual Pipe.svg'
-import Icon4 from '../assets/Pipe-Line Consultation.svg'
+import Icon4 from '../assets/Pipe-Maintanence.svg'
 import Icon5 from '../assets/Pipe-Line Consultation.svg'
 import Icon6 from '../assets/Pipe-Sunction.svg'
 import RightArrow from '../assets/Right Arrow.svg'
@@ -91,7 +91,7 @@ const Service = () => {
             </div>
 
             {/* Learn More Link Section */}
-            <div className='flex items-center gap-2 pt-2 border-t border-gray-200'>
+            <div className='flex items-center pt-2 border-t border-gray-200'>
               <a href="#" className='text-none font- text-blue-950 hover:underline p-6'>Learn more</a>
               <img src={RightArrow} alt="" className='w-10 cursor-pointer'/>
             </div>
