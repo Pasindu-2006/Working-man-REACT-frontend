@@ -13,93 +13,102 @@ import Icon5 from '../assets/Pipe-Line Consultation.svg'
 import Icon6 from '../assets/Pipe-Sunction.svg'
 import RightArrow from '../assets/Right Arrow.svg'
 import Title from './Title'
+import { motion } from "framer-motion"
 
 // Array containing service data
 const items = [
     {
       id: 1,
-      title:'Plumbing installation',
-      icon:Icon1,
-      image:Img1,
-      disc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
+      title: 'Plumbing installation',
+      icon: Icon1,
+      image: Img1,
+      disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
     },
     {
       id: 2,
-      title:'General Plumbing',
-      icon:Icon2,
-      image:Img2,
-      disc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
+      title: 'General Plumbing',
+      icon: Icon2,
+      image: Img2,
+      disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
     },
     {
       id: 3,
-      title:'Plumbing Maintanence',
-      icon:Icon3,
-      image:Img3,
-      disc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
+      title: 'Plumbing Maintanence',
+      icon: Icon3,
+      image: Img3,
+      disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
     },
     {
       id: 4,
-      title:'Fixing Pipes',
-      icon:Icon4,
-      image:Img4,
-      disc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
+      title: 'Fixing Pipes',
+      icon: Icon4,
+      image: Img4,
+      disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
     },
     {
       id: 5,
-      title:'Plumbing Line Consultation',
-      icon:Icon5,
-      image:Img5,
-      disc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
+      title: 'Plumbing Line Consultation',
+      icon: Icon5,
+      image: Img5,
+      disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
     },
     {
       id: 6,
-      title:'Drain Creaning',
-      icon:Icon6,
-      image:Img6,
-      disc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
+      title: 'Drain Cleaning',
+      icon: Icon6,
+      image: Img6,
+      disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex libero iure distinctio id, quos amet rem consectetur, velit reprehenderit porro aliquam incidunt. Saepe, iusto eaque sit optio vero placeat odit.'
     },
-
-  ];
+];
 
 const Service = () => {
   return (
     <div id='service' className='px-10 py-12 h-auto flex flex-col justify-center items-center bg-white rounded'>
       
       {/* Section Title Component */}
-      <Title />
+      <Title title="Our Services" desc="What we can do for you" />
 
-      {/* Map through items array - Grid layout for responsiveness */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-full max-w-7xl '>
-        {items.map((item) => (
+      {/* Grid Layout Container */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-full max-w-7xl'
+      >
+        {items.map((item, index) => (
 
-          <div 
-            key={item.id} 
-            className='flex flex-col justify-between bg-gray-50 rounded  border-b-4 border-blue-400 shadow-md hover:bg-blue-100 transition-all duration-300 cursor-pointer'
+          <motion.div 
+            key={item.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className='flex flex-col justify-between bg-gray-50 rounded border-b-4 border-blue-400 shadow-md hover:bg-blue-50 transition-all duration-300 cursor-pointer overflow-hidden'
           >
-            <div className=''>
+            <div>
               {/* Service Image */}
-              <img src={item.image} alt={item.title} className='w-full h-auto object-cover rounded-md'/>
+              <img src={item.image} alt={item.title} className='w-full h-48 object-cover rounded-t'/>
 
               {/* Service Title and Icon Container */}
               <div className='flex justify-between w-full items-center py-4 px-6'>
-                <h2 className='text-lg text-b font-semibold'>{item.title}</h2>
+                <h2 className='text-lg text-blue-950 font-semibold'>{item.title}</h2>
                 <img src={item.icon} alt="" className='w-8'/>
               </div>
 
               {/* Service Description */}
-              <p className='text-sm text-gray-600 pb-2 px-6'>{item.disc}</p>
+              <p className='text-sm text-gray-600 pb-4 px-6'>{item.disc}</p>
             </div>
 
             {/* Learn More Link Section */}
-            <div className='flex items-center pt-2 border-t border-gray-200'>
-              <a href="#" className='text-none font- text-blue-950 hover:underline p-6'>Learn more</a>
-              <img src={RightArrow} alt="" className='w-10 cursor-pointer'/>
+            <div className='flex items-center justify-between pt-2 border-t border-gray-200 px-6 py-4'>
+              <a href="#" className='text-blue-950 font-medium hover:underline'>Learn more</a>
+              <img src={RightArrow} alt="" className='w-6 cursor-pointer'/>
             </div>
 
-          </div>
+          </motion.div>
 
         ))}
-      </div>
+      </motion.div>
 
     </div>
   )

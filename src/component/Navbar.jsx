@@ -12,6 +12,7 @@ import Close from '../assets/close_icon.svg'
 import Rarrow from '../assets/Arrow Right-1.svg'
 import RightArrow from '../assets/Right Arrow.svg'
 import Service from './Service'
+import { motion } from "framer-motion"
 
 const Navbar = () => {
   // States to manage dropdowns and mobile menu visibility
@@ -20,7 +21,11 @@ const Navbar = () => {
   const [isRarroOpen, setRarroOpen] = useState(false)
 
   return (
-    <div className='w-full flex flex-col justify-between items-center sm:py-3 fixed top-0 left-0 z-50'>
+      <motion.div
+      initial={{opacity: 0,y: -50}}
+      animate={{opacity:1,y: 0}}
+      transition={{duration:0.6, ease:'easeOut'}}
+      className='w-full flex flex-col justify-between items-center sm:py-3 fixed top-0 left-0 z-50'>
       
       {/* Top Bar - Hidden on mobile, visible on small screens and above */}
       <div className='hidden text-white bg-black sm:flex justify-between items-center w-full sm:px-15 sm:py-1.5 top-0 absolute gap-1.5'>
@@ -273,7 +278,7 @@ const Navbar = () => {
         
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 

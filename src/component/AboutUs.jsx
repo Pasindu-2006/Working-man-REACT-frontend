@@ -1,11 +1,25 @@
 import React from 'react'
 import AboutImg from '../assets/Container.png'
 import CheckIcon from '../assets/Check.svg'
+import { easeOut, motion } from "motion/react"
+
 
 const AboutUs = () => {
   return (
-    <div id='about' className='px-10 pt-15 sm:pt-35 flex flex-col items-center justify-between bg-white'>
-        <div className='flex flex-col lg:flex-row items-center gap-12'>
+    <motion.div
+    initial="hidden"
+    whileInView="visible"
+    transition={{staggerChildren:0.2}}
+    viewport={{once:true}}
+
+    id='about' className='px-10 pt-15 sm:pt-35 flex flex-col items-center justify-between bg-white'>
+        <motion.div
+        initial={{opacity: 0,y: 30}}
+        whileInView={{opacity:1,y: 0}}
+        transition={{duration:0.5}}
+        viewport={{once:true}}
+        
+        className='flex flex-col lg:flex-row items-center gap-12'>
             
             {/* Shadow Effect eka ekka Image eka */}
             <div className='relative inline-block'>
@@ -52,8 +66,8 @@ const AboutUs = () => {
                     </button>
                 </div>
             </div>
-        </div>
-    </div>
+        </motion.div>
+    </motion.div>
   )
 }
 
