@@ -45,7 +45,6 @@ const Hero = () => {
            className='flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2'>
             <button className='text-sm bg-blue-500 text-white px-6 py-3 rounded cursor-pointer hover:bg-blue-600 transition-all font-medium'>
               Request a Job Estimate
-              
             </button>
             <button className='text-sm border border-white text-white px-6 py-3 rounded cursor-pointer hover:bg-blue-600 hover:border-blue-600 transition-all font-medium'>
               Pricing Plans
