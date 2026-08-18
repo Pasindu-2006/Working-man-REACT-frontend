@@ -12,7 +12,7 @@ const AboutUs = () => {
     transition={{staggerChildren:0.2}}
     viewport={{once:true}}
 
-    id='about' className='px-10 pt-15 sm:pt-35 flex flex-col items-center justify-between bg-white'>
+    id='about' className='px-10 pt-15 sm:pt-35 sm:px-30 flex flex-col items-center justify-between bg-white'>
         <motion.div
         initial={{opacity: 0,y: 30}}
         whileInView={{opacity:1,y: 0}}
